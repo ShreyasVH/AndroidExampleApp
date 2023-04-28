@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +15,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void clickFunction(View view) {
-        Log.i("Info", "Button pressed!");
+    public void login(View view) {
+        Log.i("Info", "Login Button pressed!");
+        EditText userNameText = (EditText) findViewById(R.id.userName);
+        EditText passwordText = (EditText) findViewById(R.id.password);
+
+        Log.i("Username", userNameText.getText().toString());
+        Log.i("Password", passwordText.getText().toString());
     }
 }
